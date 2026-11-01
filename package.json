@@ -1,0 +1,23 @@
+{
+  "name": "ecommerceframework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinothkumarbaskar1-creator/EcommerceFramework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/vinothkumarbaskar1-creator/EcommerceFramework/issues"
+  },
+  "homepage": "https://github.com/vinothkumarbaskar1-creator/EcommerceFramework#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^26.6.6"
+  }
+}
