@@ -1,8 +1,7 @@
 import{test}from '@playwright/test';
 import LoginPage from '../POM/Loginpage.js'
-import login from '../Test-Data/Login.json'
-
 import fs from 'fs'
+
 let userdata = fs.readFileSync("C:/Users/Vinothkumar/OneDrive/Desktop/SauceDemos/EcommerceFramework/Test-Data/Login.json")
 userdata = JSON.parse(userdata)
 let url=userdata.url
