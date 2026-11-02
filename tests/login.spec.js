@@ -12,8 +12,7 @@ test("login to sauce demo",async({page})=>{
    await login1.goto(url)
    await login1.logintoSauceDemo(username,password)
    await login1.clickOnLoginBtn()
-    await login1.logintoSauceDemo(username,password)
-   await login1.clickOnLoginBtn()
+  
 
 
 
