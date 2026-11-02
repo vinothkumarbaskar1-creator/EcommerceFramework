@@ -11,7 +11,7 @@ class Product{
         this.title=page.locator('.title')
         this.sortDropdown=page.locator('.product_sort_container')
         this.productName=page.locator('.inventory_item_name ')
-        this.productItem=page.locator('.inventory_item_desc')
+        this.productItem=page.locator('.inventory_item_description')
         this.productItemPrice=page.locator('.inventory_item_price')
 
     }
@@ -19,10 +19,19 @@ class Product{
     async clickOnAddToCartBtn(){
         // await this.productItem.filter({has:Name('Sauce Labs Backpack')})
         // await item.locator('button:has-Text("Add to cart")').click()
-        // let productsarr=await this.productName.all()
-        // for(let productele)
-        await this.addToCartBtn.first().click()
+        // await this.addToCartBtn.first().click()
+        let productsarr=await this.productItem.all()
+        for(let productele of productsarr){
+            let productname=await productele.textContent()
+            console.log(productname)
+            if(productname.includes("Sauce Labs Onesie")){
+                await productele.locator('button:has-Text("Add to cart")').click()
+                break;
+            }
     }
+
+}
+
 
 }
 export default Product;

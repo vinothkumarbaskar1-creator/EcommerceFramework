@@ -10,4 +10,5 @@ test('Add prduct to cart', async({page})=>{
     await loginn.logintoSauceDemo()
     await loginn.clickOnLoginBtn()
     await product.clickOnAddToCartBtn()
+    await page.waitForTimeout(3000)
 })

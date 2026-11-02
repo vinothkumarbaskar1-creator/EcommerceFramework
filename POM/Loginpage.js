@@ -9,12 +9,12 @@ class Login{
     }
 
     async goto(){
-        await this.page.goto(url)
+        await this.page.goto("https://www.saucedemo.com/")
     }
 
-    async logintoSauceDemo(username,password){
-        await this.username.fill(username)
-        await this.Password.fill(password)
+    async logintoSauceDemo(){
+        await this.username.fill("standard_user")
+        await this.Password.fill("secret_sauce")
     }
 
     async clickOnLoginBtn(){
