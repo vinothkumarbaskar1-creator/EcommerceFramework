@@ -1,12 +1,16 @@
-import{test}from '@playwright/test';
-import LoginPage from '../POM/Loginpage.js'
-import fs from 'fs'
 
-let userdata = fs.readFileSync("C:/Users/Vinothkumar/OneDrive/Desktop/SauceDemos/EcommerceFramework/Test-Data/Login.json")
-userdata = JSON.parse(userdata)
-let url=userdata.url
-let username=userdata.username
-let password=userdata.password
+import { test, expect } from '@playwright/test';
+import fs from 'fs';
+import path from 'path';
+
+const filePath = path.join(process.cwd(), 'Test-Data', 'Login.json');
+
+const userdata = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+
+let url = userdata.url;
+let username = userdata.username;
+let password = userdata.password;
+
 test("login to sauce demo",async({page})=>{
    let login1=new LoginPage(page)
  
