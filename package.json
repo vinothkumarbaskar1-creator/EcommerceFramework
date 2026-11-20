@@ -1,17 +1,23 @@
+
 {
-  "name": "automationpractise",
+  "name": "ecommerceframework",
   "version": "1.0.0",
-  "description": "",
+  "description": "Playwright JavaScript Automation Framework",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test",
+    "report": "npx playwright show-report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinothkumarbaskar1-creator/EcommerceFramework.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.65.1",
-    "@types/node": "^26.6.6",
-     "test": "npx playwright test",
-  "report": "npx playwright show-report"
+    "@types/node": "^26.6.6"
   }
 }
