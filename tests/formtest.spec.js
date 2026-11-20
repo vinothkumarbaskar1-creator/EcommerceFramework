@@ -1,5 +1,5 @@
 import{test}from '@playwright/test'
-import fs from 'fs'
+import fs from 'fs';
 import path from 'path';
 import Formm from '../Pages/Form'
 import Assertt from '../Utility/Assert'
@@ -8,18 +8,17 @@ import { json } from 'stream/consumers';
 import { Assert } from 'assert';
 
 
-//Read json file
-// const filePath = path.join(
-//     process.cwd(),
-//     'Testdata',
-//     'Form_testdata.json'
-// );
+const filePath = path.join(
+    process.cwd(),
+    'Testdata',
+    'Form_testdata.json'
+);
 
-// const userdata = JSON.parse(
-//     fs.readFileSync(filePath, 'utf-8')
-// );
+const userdata = JSON.parse(
+    fs.readFileSync(filePath, 'utf-8')
+);
 
-const userdata=JSON.parse(fs.readFileSync("C:/Users/Vinothkumar/OneDrive/Desktop/Automationpractise/Testdata/Form_testdata.json"))
+// const userdata=JSON.parse(fs.readFileSync("C:/Users/Vinothkumar/OneDrive/Desktop/Automationpractise/Testdata/Form_testdata.json"))
 
 let name=userdata[0].Name
 let email=userdata[0].Email
@@ -59,8 +58,8 @@ test('form_test',async({page})=>{
 
     //datepicker
     await form1.handledate(date,date1,date2,date3)
-    await Assertt.verifydate(form1.datepicker, '11/18/2026')
-    await Assertt.verifydate(form1.datepicker2, '18/11/2026')
+    await Assertt.verifydate(form1.datepicker, '11/20/2026')
+    await Assertt.verifydate(form1.datepicker2, '20/11/2026')
     await Assertt.verifydate(form1.startdate, '2026-11-18')
      await Assertt.verifydate(form1.enddate, '2026-11-25')
 
