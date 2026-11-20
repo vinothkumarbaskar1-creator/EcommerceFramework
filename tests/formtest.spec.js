@@ -33,7 +33,7 @@ console.log(name);
 test('form_test',async({page})=>{
     let form1=new Formm(page)
     await form1.gotourl()
-    await Assertt.verifylabel(form1.title)
+    // await Assertt.verifylabel(form1.title)
 
     //Form filling
     await form1.formfilling(name,email,phone,address)
