@@ -92,7 +92,7 @@ test('Uploading single file',async({page})=>{
     await Assertt.verifytxt(uploadobj.singlefile_msg,expectedmsg)
 })
 
-test.only('Multiple file upload',async({page})=>{
+test('Multiple file upload',async({page})=>{
     let uploadobj2=new Uploadfile(page)
     await uploadobj2.gotourl()
     await uploadobj2.uploadmulti_file(file2,file3)
