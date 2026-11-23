@@ -20,5 +20,9 @@ import { expect } from "playwright/test";
         await expect(locator).toBeEnabled()
     }
 
+    static async verifytxt(locator,expectedtxt){
+        await expect(locator).toContainText(expectedtxt)
+    }
+
  }
  export default Assertt;

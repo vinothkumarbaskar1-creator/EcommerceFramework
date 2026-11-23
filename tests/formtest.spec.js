@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import Formm from '../Pages/Form'
 import Assertt from '../Utility/Assert'
+import Uploadfile from '../Pages/Uploadfile';
 import { log } from 'console';
 import { json } from 'stream/consumers';
 import { Assert } from 'assert';
@@ -66,5 +67,39 @@ test('form_test',async({page})=>{
      //Click submit button
      await Assertt.verifybuttonenable(form1.submitbtn)
      await form1.click_submitBtn()
-    page.getByRole('button',{name:'Upload Single File'})
+   
 })
+
+const filepath2= path.join(process.cwd(),'Testdata','Upladfile.json')
+const userdata2=JSON.parse(fs.readFileSync(filepath2))
+
+let file1=userdata2[0].file1
+let file2=userdata2[1].file2
+let file3=userdata2[1].file3
+let expectedmsg=userdata2[0].expectedmsg
+let expectedmsg2=userdata2[1].expectedmsg
+console.log(typeof file2);
+console.log(typeof file3);
+
+
+
+test('Uploading single file',async({page})=>{
+    let uploadobj=new Uploadfile(page)
+     let form2=new Formm(page)
+     await form2.gotourl()
+    await uploadobj.uploadsingle_file(file1)
+    await uploadobj.click_singlefile_btn()
+    await Assertt.verifytxt(uploadobj.singlefile_msg,expectedmsg)
+})
+
+test.only('Multiple file upload',async({page})=>{
+    let uploadobj2=new Uploadfile(page)
+    await uploadobj2.gotourl()
+    await uploadobj2.uploadmulti_file(file2,file3)
+    await uploadobj2.click_multifile_btn()
+    await Assertt.verifytxt(uploadobj2.multifile_msg,expectedmsg2)
+
+})
+
+
+
