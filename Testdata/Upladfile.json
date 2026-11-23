@@ -1,12 +1,11 @@
 [
     {
-         "file1": "C:/Users/Vinothkumar/OneDrive/Pictures/Screenshots/Screenshot (2329).png",
-         "expectedmsg":"Single file selected:"
+        "file1": "Testdata/Screenshot (2329).png",
+        "expectedmsg": "Single file selected:"
     },
     {
-        "file2":"C:/Users/Vinothkumar/OneDrive/Pictures/Screenshots/Screenshot (2330).png",
-        "file3":"C:/Users/Vinothkumar/OneDrive/Pictures/Screenshots/Screenshot (2331).png",
-        "expectedmsg":"Multiple files selected: "
-        
+        "file2": "Testdata/Screenshot (2330).png",
+        "file3": "Testdata/Screenshot (2331).png",
+        "expectedmsg": "Multiple files selected:"
     }
 ]

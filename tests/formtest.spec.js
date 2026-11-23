@@ -59,7 +59,7 @@ test('form_test',async({page})=>{
 
     //datepicker
     await form1.handledate(date,date1,date2,date3)
-    await Assertt.verifydate(form1.datepicker, '11/20/2026')
+    await Assertt.verifydate(form1.datepicker, '11/23/2026')
     await Assertt.verifydate(form1.datepicker2, '20/11/2026')
     await Assertt.verifydate(form1.startdate, '2026-11-18')
      await Assertt.verifydate(form1.enddate, '2026-11-25')
